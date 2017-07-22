@@ -1,0 +1,70 @@
+$gray: #575756;
+$gray-light: #7d7c7c;
+$black: #292929;
+$black1: #191919;
+$black2: #1d1d1b;
+$white: #fff;
+$light-blue: #39f;
+$red: #e30613;
+$gold: #d0ae88;
+
+$base-font-sans-serif: 'Avenir','Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+
+// Body
+$base-text-color: $black  ;
+$base-background-color: $white;
+$base-font-size: 16px ;
+$base-line-height: 1.44 ; 
+$base-font-family: $base-font-sans-serif ;
+
+$vertical-rhythm: ($base-line-height * 1em);
+
+$base-min-width: 320px;
+
+// Links
+$base-link-color: $black2;
+
+// Buttons
+$btn-color: $white ;
+$btn-background: $red;
+$btn-padding: 10px 5px;
+$btn-font-size: inherit;
+
+// Forms
+$form-element-padding: $btn-padding;
+$form-element-border-color: $gray;
+$form-element-focus-border-color: $black;
+$placeholder-color: $gray;
+
+// Headers
+$h1-font-size: 68px;
+$h2-font-size: 40px;
+$h3-font-size: 30px;
+$h4-font-size: 26px;
+$h5-font-size: 22px;
+$h6-font-size: 20px;
+
+$headings-font-family: inherit;
+$headings-color: inherit;
+
+$animation-speed: 0.3s;
+
+$breakpoints: (
+    'xs-phone': 320px,
+    'phone': 480px,
+    'tablet': 768px,
+    'desktop': 1024px,
+    'widescreen': 1200px
+);
+
+// keywords
+$media-expressions: (
+    'screen': 'screen',
+    'print': 'print',
+    'handheld': 'handheld',
+    'landscape': '(orientation: landscape)',
+    'portrait': '(orientation: portrait)',
+    'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+    'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
