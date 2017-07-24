@@ -12,7 +12,10 @@
         padding: 9px 0;
         nav {
             float: right;
-            margin-right: -32px;
+            @include media('>1500px') {
+
+                margin-right: -32px;
+            }
             a {
                 margin: 0 24px;
                 display: inline-block;
@@ -46,19 +49,50 @@
         align-items: center;
         justify-content: space-between;
         nav {
-
+            @include media('>1500px') {
+                margin-right: -54px;
+            }
             display: flex;
-            align-items: center;
+            align-items: stretch;
             justify-content: stretch;
-            text-align: center;
-            font-size: 17px;
+
+            font-size: 18px;
+            @include media('<1500px') {
+                font-size: 14px;
+            }
             a {
-                padding: 40px 15px;
+                @include animate(background-color);
+                padding: 45px 22px 40px;
                 display: inline-block;
                 position: relative;
-                font-size: 18px;
+                margin-right: 1px;
+                background-color: transparent;
+                font-weight: 700;
+                line-height: 1.2;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                @include media('<widescreen') {
+                    padding: 20px 5px;
+                    font-size: 14px;
+                }
+                br {
+                    @include media('<widescreen') {
+                        display: none;
+                    }
+                }
+                &:first-child,
+                &:last-child {
+                    flex-shrink: 0;
+                     @include media('<widescreen') {
+                  flex-shrink:1;
+                    }
+                }
+                &:hover {
+                    background-color: $black;
+                }
                 &:after {
-                	content: '';
+                    content: '';
                     position: absolute;
                     width: 1px;
                     top: 50%;
@@ -66,11 +100,25 @@
                     background-color: $gold;
                     height: 50px;
                     transform: translateY(-50%);
+
                 }
-                &:last-child:after{
-                	display:none;
+                &:last-child:after {
+                    display: none;
                 }
             }
         }
+    }
+}
+
+.logo {
+    display: inline-block;
+    width: 189px;
+    padding:0 5px 0 0;
+    @include media('<widescreen') {
+        width: 100px;
+    }
+    img {
+        width: 100%;
+        height: auto;
     }
 }
