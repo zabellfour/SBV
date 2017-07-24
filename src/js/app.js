@@ -5,6 +5,16 @@
 
 import DE from './modules/dots';
 
+$(document).ready(function() {
+        $('.owl-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: false,
+            dots: true,
+            nav: true
+        });
+    });
+
 ( ($) => {
   'use strict';
 
