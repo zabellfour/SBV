@@ -3,14 +3,12 @@
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
 
-import DE from './modules/dots';
 
 ( ($) => {
   'use strict';
 
   // When DOM is ready
   $(() => {
-    DE.dotsEffect();
     $('.banner-carousel').owlCarousel({
             items: 1,
             loop: true,
@@ -18,6 +16,7 @@ import DE from './modules/dots';
             dots: true,
             nav: true
         });
+
     $('.brands-carousel').owlCarousel({
             items: 4,
             loop: true,
@@ -25,9 +24,20 @@ import DE from './modules/dots';
             nav: true,
             dots: false
         });
+
     $(".accelerator").hover(function(){
         $("img", this).toggleClass("grayscale");
     });
+
+    var $menuOpener = $('.menu-opener'),
+        $body = $('body'),
+        $menuClose = $('.menu-close');
+        $menuOpener.on("click", function() {
+        $body.toggleClass('menu-open');
+        });
+        $menuClose.on("click", function() {
+             $body.removeClass('menu-open');
+        });
   });
 
 })(jQuery);
