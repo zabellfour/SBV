@@ -3,24 +3,31 @@
 // This file will be compiled into app.js and will not be minified.
 // Feel free with using ES6 here.
 
-import DE from './modules/dots';
+
 
 $(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            autoplay: false,
-            dots: true,
-            nav: true
-        });
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: false,
+        dots: true,
+        nav: true
     });
+}); 
 
-( ($) => {
-  'use strict';
+(($) => {
+    'use strict'; 
 
-  // When DOM is ready
-  $(() => {
-    DE.dotsEffect();
-  });
+     $(() => {
+        var $menuOpener = $('.menu-opener'),
+            $body = $('body'),
+            $menuClose = $('.menu-close');
+        $menuOpener.on("click", function() {
+            $body.toggleClass('menu-open');
+        });
+        $menuClose.on("click", function() {
+             $body.removeClass('menu-open');
+        });
+     });
 
 })(jQuery);
