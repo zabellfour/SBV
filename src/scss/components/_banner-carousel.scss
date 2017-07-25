@@ -1,4 +1,4 @@
-.owl-carousel {
+.banner-carousel {
 	.slide {
 		height: 791px;
 		background-position: 50% 50%;
@@ -26,6 +26,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		.owl-next {
+			@include animate (opacity, .3s)
 			position: absolute;
 			width: 30px;
 			height: 30px;
@@ -43,6 +44,9 @@
 				background-image: url(../images/owl-nav-arrow.svg);
 				background-repeat: no-repeat;
 				background-position: 50% 50%;
+			}
+			&:hover {
+				opacity: 0.6;
 			}
 		}
 		.owl-prev {
@@ -71,8 +75,9 @@
 			border: 1px solid $white;
 			border-radius: 50%;
 			&:after {
+				@include animate (opacity, .3s);
 				content: "";
-				display: none;
+				opacity: 0;
 				position: absolute;
 				width: 12px;
 				height: 12px;
@@ -84,12 +89,12 @@
 			}
 			&.active {
 				&:after {
-					display: block;
+					opacity: 1;
 				}
 			}
 			&:hover {
 				&:after {
-					display: block;
+					opacity: 1;
 				}
 			}
 		}

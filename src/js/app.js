@@ -5,22 +5,29 @@
 
 import DE from './modules/dots';
 
-$(document).ready(function() {
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-            autoplay: false,
-            dots: true,
-            nav: true
-        });
-    });
-
 ( ($) => {
   'use strict';
 
   // When DOM is ready
   $(() => {
     DE.dotsEffect();
+    $('.banner-carousel').owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: false,
+            dots: true,
+            nav: true
+        });
+    $('.brands-carousel').owlCarousel({
+            items: 4,
+            loop: true,
+            autoplay: false,
+            nav: true,
+            dots: false
+        });
+    $(".accelerator").hover(function(){
+        $("img", this).toggleClass("grayscale");
+    });
   });
 
 })(jQuery);

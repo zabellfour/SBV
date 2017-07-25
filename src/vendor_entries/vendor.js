@@ -4,5 +4,6 @@
 
 module.exports = [
   './node_modules/jquery/dist/jquery.js',
-  './node_modules/owl.carousel/dist/owl.carousel.js'
+  './node_modules/owl.carousel/dist/owl.carousel.js',
+  './node_modules/jquery-gray/js/jquery.gray.js'
 ];

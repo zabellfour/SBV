@@ -1,0 +1,33 @@
+.accelerators-block {
+	padding: 68px 0 93px 0;
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+	.accelerator {
+		display: block;
+		width: 31%;
+		position: relative;
+	}
+	.acc-title-holder {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 11px;
+		left: 14px;
+		width: 357px;
+		height: 316px;
+		border: 1px solid $white;
+		box-sizing: border-box; 
+		.acc-title {
+			text-align: center;
+			span, strong {
+			display: inline-block;
+			width: 100%;
+			color: $white;
+			font-size: 48px;
+			text-shadow: 2px 2px 6px $gray;
+			}
+		}
+	}
+}
