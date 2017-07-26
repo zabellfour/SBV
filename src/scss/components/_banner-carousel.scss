@@ -1,14 +1,13 @@
 .banner-carousel {
 	.slide {
-		height: 791px;
-		background-position: 50% 50%;
+		height: 738px;
 		background-size: cover;
 	}
 	.slide-title {
 		position: absolute;
 		max-width: 222px;
-		top: 58%;
-		left: 24.5%;
+		top: 63%;
+		left: 25.5%;
 		strong {
 			display: inline-block;
 			width: 100%;
@@ -22,14 +21,14 @@
 		height: 30px;
 		width: 100%;
 		position: absolute;
-		top: 83%;
+		top: 88.5%;
 		left: 50%;
 		transform: translateX(-50%);
 		.owl-next {
 			@include animate (opacity, .3s)
 			position: absolute;
-			width: 30px;
-			height: 30px;
+			width: 25px;
+			height: 33px;
 			right: 0;
 			left: auto;
 			font-size: 0;
@@ -64,7 +63,7 @@
 		height: 30px;
 		max-width: 100px;
 		width: 100%;
-		top: 83%;
+		top: 88.5%;
 		left: 50%;
 		transform: translateX(-50%);
 		.owl-dot {

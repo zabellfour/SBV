@@ -7,15 +7,11 @@
 
 
 .ornament-bg {
-	background: url(../images/ornament.png) -5px 0 repeat;
-	background-repeat: round;
+	background: url(../images/ornament.png) -5px 0;
 	background-size: 3.5%;
 	background-color: #fff5eb;
 	padding: 39px 0 82px 0;
 	border-top: 25px solid #fff5eb;
-	&:before {
-
-	}
 	.container {
 		padding: 0;
 	}
@@ -65,14 +61,16 @@
 			display: block;
 			max-width: 546px;
 			height: auto;
+			object-fit: cover;
 		}
 		.text-side {
 			padding: 35px 45px 15px 33px;
 			background-color: $white;
-			@extend %clearfix;
+			position: relative;
 			h6 {
 				font-weight: 700;
 				margin-bottom: 0;
+				line-height: 1.1;
 			}
 			span {
 				font-size: 15px;
@@ -82,41 +80,47 @@
 				height: 1px;
 				width: 70%;
 				background-color: #999999;
-				margin: 10px 0 28px 0;
+				margin: 4px 0 29px 0;
 			}
 			p {
-				color: #999999;
+				color: #999;
+				line-height: 1.2;
 				&:first-of-type {
 					margin-bottom: 0;
 				}
+			}
+			.bottom-r-link {
+				padding: 15px;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				line-height: 1;
 			}
 		}
 	}
 }
 
 .brands {
-	padding: 65px 0 100px 0;
+	padding: 65px 0 90px 0;
 	.container {
 		padding: 0;
 	}
 	h2 {
 		text-align: center;
-		margin-bottom: 65px;
+		margin-bottom: 48px;
 	}
 	.carousel-holder {
-	padding: 30px 100px 52px;
+	padding: 20px 100px 52px;
 	box-shadow: 0px 0px 12px $gray-light;
 		.brands-carousel {
 			.brands-slide {
-				width: 230px;
-				height: 100px;
+				width: 240px;
 				margin: 0 auto;
 			}
 			img {
 				display: block;
 				width: 100%;
-				height: 100%;
-				object-fit: cover;
+				height: auto;
 			}
 			.owl-nav {
 				display: block;
@@ -125,7 +129,6 @@
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
-				z-index: -1;
 				.owl-next {
 					display: block;
 					position: absolute;
@@ -138,7 +141,7 @@
 				}
 				.owl-prev {
 					@extend .owl-next;
-					left: -65px;
+					left: -60px;
 					right: auto;
 					transform: rotate(180deg);
 				}
@@ -149,11 +152,11 @@
 
 
 .image-bg {
-	padding: 34px 0 67px 0;
+	padding: 20px 0 67px 0;
 	background: url(../images/bottom-img-bg.svg) #f4f4f4;
 	background-repeat: no-repeat;
-	background-size: 99%;
-	background-position: 75% 42%;
+	background-size: 100%;
+	background-position: 0 42%;
 	.container {
 		padding: 0;
 	}
@@ -205,8 +208,4 @@
 .bold {
 	font-weight: 600;
 	color: inherit;
-}
-
-.pull-right {
-	float: right;
 }

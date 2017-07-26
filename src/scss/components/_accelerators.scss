@@ -1,13 +1,29 @@
 .accelerators-block {
 	padding: 68px 0 93px 0;
 	.container {
+		padding: 0;
+	}
+	.accelerators-holder {
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		.accelerator {
+			&:last-child {
+				.acc-title {
+				padding-top: 50px;
+				}
+			}
+		}
 	}
 	.accelerator {
 		display: block;
-		width: 31%;
+		width: 30%;
 		position: relative;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 	}
 	.acc-title-holder {
 		position: absolute;
@@ -24,10 +40,15 @@
 			span, strong {
 			display: inline-block;
 			width: 100%;
+			line-height: 1.2;
 			color: $white;
 			font-size: 48px;
 			text-shadow: 2px 2px 6px $gray;
 			}
+			span {
+				line-height: 1;
+			}
+
 		}
 	}
 }
