@@ -4,13 +4,13 @@
     &:after {
         content: '';
         display: inline-block;
-        width: 5746px;
-        height: 2690px;
+       left: 0;
+       right: 0;
+       bottom:0;
+       background-image: url('../images/banner-decor.png');
         position: absolute;
-        left: -2311px;
-        bottom: -596px;
-        border-bottom: 596px solid $white;
-        border-radius: 50%;
-        pointer-events:none;
+      height: 92px;
+      background-size: 100% 100%;
+pointer-events:none;
     }
 }
