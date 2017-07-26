@@ -3,6 +3,9 @@
 	@include media('<tablet') {
 		padding: 28px 0 33px 0;
 	}
+	@include media('<tablet') {
+		padding: 30px 0 0 0;
+	}
 	.container {
 		padding: 0;
 		@media screen and (max-width: 1600px){

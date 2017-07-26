@@ -196,6 +196,9 @@
 				right: 0;
 				bottom: 0;
 				line-height: 1;
+				@include media('<phone') {
+		    		padding: 10px 10px 25px 10px;
+				}
 			}
 		}
 	}
@@ -294,6 +297,10 @@
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: 0 42%;
+	@include media('<phone') {
+		background-size: 200%;
+	    background-position: -280px -190px;
+	}
 	.container {
 		padding: 0;
 	}
@@ -328,16 +335,39 @@
 		align-items: center;
 		padding: 35px 23px 53px 32px;
 		background-color: $white;
+		@include media('<phone') {
+       		flex-wrap: wrap;
+       		padding: 23px 20px;
+		}
 		.picture-holder {
-			width: 13%;
+			width: 12.5%;
 			max-height: 164px;
+			@include media('<phone') {
+       		width: 43%;
+       		&.picture-3 {
+				order: 4;
+       			}
+       		&.picture-4 {
+				order: 3;
+       			}
+       		&.picture-5 {
+				order: 6;
+       			}
+       		&.picture-6 {
+				order: 5;
+       			}
+       		&.picture-7 {
+				order: 8;
+       			}
+       		&.picture-8 {
+				order: 7;
+       			}
+			}
 			img {
 				display: block;
 				margin: 0 auto;
 			}
-			&:first-child {
-				width: 17%;
-			}
+
 		}
 	}
 }
