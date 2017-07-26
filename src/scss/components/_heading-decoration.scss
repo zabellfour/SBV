@@ -1,0 +1,56 @@
+.heading-decoration {
+    position: relative;
+    display: inline-block;
+    min-width: 264px;
+
+    color: $white;
+
+    .text {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+display:block;
+       padding: 15px 40px;
+        &:after {
+        	content: '';
+            position: absolute;
+            height: 70px;
+            left: 88px;
+            right: 176px;
+            bottom: 0;
+            background-image: url('../images/heading-decor-center.png');
+            background-size: 1px 70px;
+            background-repeat: repeat-x;
+            z-index: -1;
+        }
+    }
+    &:before {
+        content: '';
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+        width: 88px;
+        height: 73px;
+        display: inline-block;
+        background-image: url('../images/heading-decor-left.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+
+        right: 0;
+        bottom: 0;
+        width: 176px;
+        height: 92px;
+        display: inline-block;
+        background-image: url('../images/heading-decor-right.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+}
