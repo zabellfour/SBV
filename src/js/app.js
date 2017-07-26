@@ -22,7 +22,17 @@
             loop: true,
             autoplay: false,
             nav: true,
-            dots: false
+            dots: false,
+            responsive:{
+                0:{
+                    items:2,
+                    nav:true
+                },
+                768:{
+                    items:4,
+                    nav:true
+                }
+            }
         });
 
     $(".accelerator").hover(function(){

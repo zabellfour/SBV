@@ -1,16 +1,28 @@
 .accelerators-block {
 	padding: 68px 0 93px 0;
+	@include media('<tablet') {
+		padding: 28px 0 33px 0;
+	}
 	.container {
 		padding: 0;
+		@media screen and (max-width: 1600px){
+			padding: 0 15px;
+		}
 	}
 	.accelerators-holder {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		@include media('<tablet') {
+			flex-wrap: wrap;
+		}
 		.accelerator {
 			&:last-child {
 				.acc-title {
 				padding-top: 50px;
+				@media screen and (max-width: 1600px){
+					padding: 0;
+					}
 				}
 			}
 		}
@@ -19,23 +31,46 @@
 		display: block;
 		width: 30%;
 		position: relative;
+		@include media('<tablet') {
+			width: 100%;
+			height: 320px;
+			margin-bottom: 30px;
+		}
+		@media screen and (max-width: 600px) {
+			height: 280px;
+			margin-bottom: 20px;
+		}
+		@include media('<phone') {
+			height: 124px;
+		}
 		img {
 			display: block;
 			width: 100%;
 			height: auto;
+			@include media('<tablet') {
+			height: 100%;
+			object-fit: cover;
+			}
 		}
 	}
 	.acc-title-holder {
 		position: absolute;
 		display: flex;
 		align-items: center;
-		top: 11px;
-		left: 14px;
-		width: 357px;
-		height: 316px;
+		top: 3.5%;
+		left: 3.5%;
+		width: 93%;
+		height: 93%;
 		border: 1px solid $white;
-		box-sizing: border-box; 
+		box-sizing: border-box;
+		@include media('<phone') {
+			top: 4%;
+			left: 2%;
+			width: 96%;
+			height: 92%;
+		} 
 		.acc-title {
+			width: 100%;
 			text-align: center;
 			span, strong {
 			display: inline-block;
@@ -44,6 +79,13 @@
 			color: $white;
 			font-size: 48px;
 			text-shadow: 2px 2px 6px $gray;
+				@media screen and (max-width: 1600px){
+					font-size: 36px;
+				}
+				@include media('<widescreen') {
+		            font-size: 30px;
+		            line-height: 1.5;
+	        	}
 			}
 			span {
 				line-height: 1;
