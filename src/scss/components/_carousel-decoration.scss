@@ -1,0 +1,16 @@
+.banner-decor {
+    position: relative;
+    overflow: hidden;
+    &:after {
+        content: '';
+        display: inline-block;
+        width: 5746px;
+        height: 1600px;
+        position: absolute;
+        left: -2311px;
+        bottom: -596px;
+        border-bottom: 596px solid $white;
+        border-radius: 50%;
+        pointer-events:none;
+    }
+}
