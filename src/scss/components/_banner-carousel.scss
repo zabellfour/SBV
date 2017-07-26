@@ -1,19 +1,64 @@
 .banner-carousel {
 	.slide {
 		height: 738px;
-		background-size: cover;
+		background-size: 100%;
+		background-position: 50% 10%;
+		background-repeat: no-repeat;
+		@media screen and (max-width: 1600px){
+			height: 638px;
+			}
+		@include media('<widescreen') {
+	            height: 490px;
+	        }
+	    @include media('<tablet') {
+	            height: 390px;
+	        }
+	    @include media('<phone') {
+	            height: 291px;
+	            background-size: cover;
+	            &.main-slide {
+	           	background-position: 43% 50%;
+	            background-size: 155%;
+	        }
+	    }
 	}
 	.slide-title {
 		position: absolute;
-		max-width: 222px;
-		top: 63%;
-		left: 25.5%;
+		width: 100%;
+		top: 62%;
+		left: 0;
+		.container {
+			padding-left: 170px;
+			@media screen and (max-width: 1600px){
+				padding-left: 250px;
+			}
+			@media screen and (max-width: 1250px){
+				padding-left: 180px;
+			}
+			@include media('<widescreen') {
+	            padding-left: 212px;
+	        }
+	         @include media('<phone') {
+	            padding-left: 20px;
+	            line-height: 1;
+	        }
+		}
 		strong {
 			display: inline-block;
 			width: 100%;
 			font-weight: 700;
 			font-size: 24px;
 			color: $white;
+			@media screen and (max-width: 1600px){
+				font-size: 20px;
+			}
+			@include media('<widescreen') {
+	            font-size: 18px;
+	        }
+	        @include media('<phone') {
+	            font-size: 12px;
+	            line-height: 1;
+	        }
 		}
 	}
 	.owl-nav {
@@ -24,6 +69,11 @@
 		top: 88.5%;
 		left: 50%;
 		transform: translateX(-50%);
+		@include media('<phone') {
+				top: 80.5%;
+	            max-width: 156px;
+	            height: 20px;
+	        }
 		.owl-next {
 			@include animate (opacity, .3s)
 			position: absolute;
@@ -33,6 +83,14 @@
 			left: auto;
 			font-size: 0;
 			padding: 10px;
+			@include media('<desktop') {
+           		width: 20px;
+				height: 28px;
+    		}
+    		@include media('<tablet') {
+           		width: 14px;
+				height: 19px;
+    		}
 			&:after {
 				position: absolute;
 				left: 0;
@@ -66,6 +124,11 @@
 		top: 88.5%;
 		left: 50%;
 		transform: translateX(-50%);
+		@include media('<phone') {
+			top: 80.5%;
+			height: 20px;
+           	max-width: 56px;
+    	}
 		.owl-dot {
 			position: relative;
 			width: 18px;
@@ -73,6 +136,10 @@
 			background: transparent;
 			border: 1px solid $white;
 			border-radius: 50%;
+			@include media('<phone') {
+           		width: 10px;
+				height: 10px;
+    		}
 			&:after {
 				@include animate (opacity, .3s);
 				content: "";
@@ -85,6 +152,10 @@
 				transform: translate(-50%, -50%);
 				background-color: $white;
 				border-radius: 50%;
+				@include media('<phone') {
+           		width: 6px;
+				height: 6px;
+    			}
 			}
 			&.active {
 				&:after {

@@ -41,6 +41,9 @@ h6, .h6 {
 
 p {
   margin: 0 0 1em;
+  @include media('<desktop') {
+    font-size: 15px;
+  }
 }
 
 a {
