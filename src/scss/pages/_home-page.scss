@@ -9,9 +9,6 @@
             font-size: 32px;
 	    }
 	    @include media('<tablet') {
-            font-size: 24px;
-	    }
-	    @include media('<phone') {
             font-size: 30px;
 	    }
 	}
@@ -61,9 +58,13 @@
 			padding: 0 22px;
 			line-height: 100px;
 			top: -60px;
-			@include media('<desktop') {
+			@include media('<widescreen') {
 	           line-height: 1.2;
 	           top: -30px;
+		    }
+		    @include media('<tablet') {
+	           width: 65%;
+	           text-align: center;
 		    }
 		    @include media('<phone') {
 	           padding: 0 ;
@@ -206,12 +207,18 @@
 
 .brands {
 	padding: 65px 0 90px 0;
+	@include media('<phone') {
+		padding: 0;
+	}
 	.container {
 		padding: 0;
 	}
 	h2 {
 		text-align: center;
 		margin-bottom: 48px;
+		@include media('<phone') {
+		margin-bottom: 35px;
+		}
 	}
 	.carousel-holder {
 	padding: 20px 100px 52px;
@@ -267,7 +274,7 @@
 		    		@include media('<tablet') {
 		           		width: 14px;
 						height: 19px;
-						right: -35px;
+						right: -10px;
 		    		}
 		    		@include media('<phone') {
 						right: -18px;
@@ -279,7 +286,7 @@
 					right: auto;
 					transform: rotate(180deg);
 					@include media('<tablet') {
-		           		left: -30px;
+		           		left: -10px;
 		    		}
 		    		@include media('<phone') {
 						left: -18px;
@@ -298,6 +305,7 @@
 	background-size: 100%;
 	background-position: 0 42%;
 	@include media('<phone') {
+		padding: 38px 0 67px 0;
 		background-size: 200%;
 	    background-position: -280px -190px;
 	}
@@ -310,8 +318,8 @@
 		@include media('<phone') {
 			width: 80%;
 			margin: 0 auto;
-			line-height: 1;
-			margin-bottom: 20px;
+			line-height: 1.1;
+			margin-bottom: 16px;
 		}
 	}
 	p {
@@ -327,6 +335,7 @@
 		}
 		@include media('<phone') {
        		width: 90%;
+       		line-height: 1.2;
 		}
 	}
 	.pictures-holder {
@@ -343,7 +352,14 @@
 			width: 12.5%;
 			max-height: 164px;
 			@include media('<phone') {
-       		width: 43%;
+       		width: 50%;
+       		margin-bottom: 10px;
+       		&.picture-2 {
+				img {
+					width: 57px;
+					height: 77px;
+				}
+       		}
        		&.picture-3 {
 				order: 4;
        			}
@@ -366,6 +382,10 @@
 			img {
 				display: block;
 				margin: 0 auto;
+				@include media('<phone') {
+					width: 55%;
+					height: auto;
+				}
 			}
 
 		}

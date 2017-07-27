@@ -9,6 +9,7 @@
 			}
 		@include media('<widescreen') {
 	            height: 490px;
+	            background-size: cover;
 	        }
 	    @include media('<tablet') {
 	            height: 390px;
@@ -38,9 +39,15 @@
 			@include media('<widescreen') {
 	            padding-left: 212px;
 	        }
+	        @include media('<desktop') {
+	            padding-left: 112px;
+	        }
+	        @media screen and (max-width: 600px) {
+	            padding-left: 70px;
+	            line-height: 1;
+	        }
 	         @include media('<phone') {
 	            padding-left: 20px;
-	            line-height: 1;
 	        }
 		}
 		strong {
@@ -55,9 +62,12 @@
 			@include media('<widescreen') {
 	            font-size: 18px;
 	        }
+	        @include media('<tablet') {
+	            font-size: 14px;
+	            line-height: 1;
+	        }
 	        @include media('<phone') {
 	            font-size: 12px;
-	            line-height: 1;
 	        }
 		}
 	}
@@ -69,7 +79,10 @@
 		top: 88.5%;
 		left: 50%;
 		transform: translateX(-50%);
-		@include media('<phone') {
+		@include media('<widescreen') {
+				top: 85.5%;
+	        }
+	    @include media('<phone') {
 				top: 80.5%;
 	            max-width: 156px;
 	            height: 20px;
@@ -124,6 +137,9 @@
 		top: 88.5%;
 		left: 50%;
 		transform: translateX(-50%);
+		@include media('<widescreen') {
+				top: 85.5%;
+	        }
 		@include media('<phone') {
 			top: 80.5%;
 			height: 20px;

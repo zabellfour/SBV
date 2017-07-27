@@ -2,15 +2,21 @@
     position: relative;
     overflow: hidden;
     &:after {
-        content: '';
-        display: inline-block;
-       left: 0;
-       right: 0;
-       bottom:0;
-       background-image: url('../images/banner-decor.png');
-        position: absolute;
+      content: '';
+      display: inline-block;
+      left: 0;
+      right: 0;
+      bottom:0;
+      background-image: url('../images/banner-decor.png');
+      position: absolute;
       height: 92px;
       background-size: 100% 100%;
-pointer-events:none;
+      pointer-events:none;
+      @include media('<tablet') {
+      height: 24px;
+      }
+      @include media('<phone') {
+      height: 17px;
+      }
     }
 }
