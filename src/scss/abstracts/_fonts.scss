@@ -2,20 +2,20 @@
 
 @font-face {
 	font-family: 'Avenir';
-	src: url('AvenirLTStd-HeavyOblique.eot');
-	src: url('AvenirLTStd-HeavyOblique.eot?#iefix') format('embedded-opentype'),
-		url('AvenirLTStd-HeavyOblique.woff') format('woff'),
-		url('AvenirLTStd-HeavyOblique.ttf') format('truetype');
+	src: url('../fonts/AvenirLTStd-HeavyOblique.eot');
+	src: url('../fonts/AvenirLTStd-HeavyOblique.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AvenirLTStd-HeavyOblique.woff') format('woff'),
+		url('../fonts/AvenirLTStd-HeavyOblique.ttf') format('truetype');
 	font-weight: 900;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: 'Avenir';
-	src: url('AvenirLTStd-Heavy.eot');
-	src: url('AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'),
-		url('AvenirLTStd-Heavy.woff') format('woff'),
-		url('AvenirLTStd-Heavy.ttf') format('truetype');
+	src: url('../fonts/AvenirLTStd-Heavy.eot');
+	src: url('../fonts/AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/AvenirLTStd-Heavy.woff') format('woff'),
+		url('../fonts/AvenirLTStd-Heavy.ttf') format('truetype');
 	font-weight: 900;
 	font-style: normal;
 }
