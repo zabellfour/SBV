@@ -1,0 +1,166 @@
+.notre-savoir-page {
+	strong {
+		display: inline-block;
+		text-align: center;
+		font-size: 26px;
+		font-weight: 600;
+		font-style: italic;
+	}
+	.text-content {
+	padding-top: 33px;
+	.text-wrapper {
+		p {
+		color: $gray-light;
+			&:first-of-type {
+				margin-bottom: 0;
+			}
+		}	
+	}
+	.illustration-block {
+		max-width: 956px;
+		margin: 0 auto;
+		padding: 43px 89px 47px 112px;
+		box-shadow: 2px 2px 6px $gray;
+		margin-bottom: 25px;
+			.illstr-holder{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin-bottom: 20px;
+			}
+			.illstr {
+				display: flex;
+				align-items: center;
+				img {
+					display: block;
+					margin: 0 auto;
+				}
+				&:first-child {
+					width: 18%;
+				}
+				&:last-child {
+					width: 33%;
+				}
+			}
+		}
+	}
+	.scheme-block {
+		margin-bottom: 87px;
+	}
+	.full-w50 {
+	margin-bottom: 31px;
+		.heading-decoration {
+			margin-bottom: 30px;
+		}
+	}
+	.w50-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	.w50-block {
+		display: flex;
+		justify-content: flex-end;
+		width: 50%;
+		min-height: 375px;
+		background-size: cover;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		&:nth-child(2){
+			justify-content: flex-start;
+		} 
+	}
+	.w50-container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		max-width: 640px;
+			strong {
+				width: 90%;
+			}
+			ul {
+				li {
+					font-weight: 600;
+					font-size: 20px;
+				}
+			}
+			img {
+				display: block;
+				width: 50%;
+				height: auto;
+				margin: 0 auto;
+			}
+		}
+	}
+	.text-content-2 {
+	margin-bottom: 27px;
+	}
+		.pictures-holder {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 35px 23px 53px 32px;
+		background-color: $white;
+		@include media('<phone') {
+       		flex-wrap: wrap;
+       		padding: 23px 20px;
+		}
+		.picture-holder {
+			width: 12.5%;
+			max-height: 164px;
+			@include media('>tablet') {
+			&.picture-1 {
+       			width: 7%;
+       		}
+       		&.picture-2 {
+       			width: 7%;
+       			}
+			}
+			@include media('<phone') {
+       		width: 50%;
+       		margin-bottom: 10px;
+       		&.picture-2 {
+				img {
+					width: 57px;
+					height: 77px;
+				}
+       		}
+       		&.picture-3 {
+				order: 4;
+       			}
+       		&.picture-4 {
+				order: 3;
+       			}
+       		&.picture-5 {
+				order: 6;
+       			}
+       		&.picture-6 {
+				order: 5;
+       			}
+       		&.picture-7 {
+				order: 8;
+       			}
+       		&.picture-8 {
+				order: 7;
+       			}
+			}
+			img {
+				display: block;
+				margin: 0 auto;
+				@include media('<phone') {
+					width: 55%;
+					height: auto;
+				}
+			}
+
+		}
+	}
+}
+
+
+.marked-gold {
+	color: $gold;
+}
+
+.unmarked-list {
+	@extend %listreset;
+	padding: 0;
+}

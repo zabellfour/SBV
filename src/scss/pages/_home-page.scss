@@ -27,11 +27,21 @@
 	@include media('<desktop') {
             background-size: 5%;
 	    }
+	@include media('<tablet') {
+            padding: 10px 0 50px 0;
+            background-size: 9%;
+	    }
 	@include media('<phone') {
             background-size: 15%;
 	    }
 	.container {
 		padding: 0;
+		@media screen and (max-width: 1600px){
+			padding: 0 15px;
+		}
+		@include media('<tablet') {
+			padding: 0;
+		}
 	}
 	.content-wrapper {
 		padding: 58px 58px 75px 84px;
@@ -41,12 +51,12 @@
             padding: 48px 48px 65px 64px;
 	    }
 	    @include media('<desktop') {
-           padding: 35px 20px 50px 20px;
+           padding: 0px 20px 50px 20px;
+           border: 0;
+           border-bottom: 1px solid $gold;
 	    }
 	    @include media('<phone') {
-           padding: 35px 0 50px 0;
-           border-left: 0;
-           border-right: 0;
+           padding: 0 0 50px 0;
 	    }
 		.section-title, .btn-holder {
 			position: absolute;
@@ -62,15 +72,48 @@
 	           line-height: 1.2;
 	           top: -30px;
 		    }
+		    @include media('<desktop') {
+		    	position: relative;
+		    	background: transparent;
+		    	padding: 0;
+		    	max-width: 280px;
+		    	left: auto;
+		    	transform: translateX(0);
+		    	margin: 0 auto;
+		    	text-align: center;
+	           &:after {
+	           	content: "";
+	           	position: absolute;
+	           	top: 50%;
+	           	height: 1px;
+	           	width: 500px;
+	           	right: -525px;
+	           	left: auto;
+	           	background-color: $gold;
+	           }
+	           &:before {
+	           	content: "";
+	           	position: absolute;
+	           	top: 50%;
+	           	height: 1px;
+	           	width: 500px;
+	           	background-color: $gold;
+	           	left: -525px;
+	           }
+		    }
 		    @include media('<tablet') {
-	           width: 65%;
-	           text-align: center;
+				top: -13px;
 		    }
 		    @include media('<phone') {
-	           padding: 0 ;
-	           width: 85%;
-	           top: -22px;
-	           text-align: center;
+		    	top: -19px;
+	           	padding: 0;
+	           &:after {
+	           	right: -500px;
+	           	left: auto;
+	           }
+	           &:before {
+	           	left: -500px;
+	           }
 		    }
 		}
 		.btn-holder {
@@ -101,6 +144,10 @@
 				text-align: center;
 				@include media('<desktop') {
 		           padding: 12px 28px;
+		           font-size: 16px;
+		    	}
+		    	@include media('<tablet') {
+		           padding: 12px 20px;
 		           font-size: 16px;
 		    	}
 				&:hover {
@@ -146,6 +193,9 @@
 			@include media('<tablet') {
 	    		padding: 15px 25px 40px 15px;
 			}
+			@include media('<phone') {
+	    		padding: 10px 25px 30px 15px;
+			}
 			h6 {
 				font-weight: 700;
 				margin-bottom: 0;
@@ -181,7 +231,7 @@
 				@include media('<phone') {
 		    		display: none;
 				}
-				&:first-of-type {
+				&:nth-of-type(2) {
 					margin-bottom: 0;
 				}
 			}
@@ -226,8 +276,9 @@
 	@include media('<tablet') {
 		padding: 20px 60px 32px;
 	}
-	@include media('<tablet') {
+	@include media('<phone') {
 		padding: 20px 30px 32px;
+		box-shadow: none;
 	}
 		.brands-carousel {
 			.brands-slide {
@@ -274,7 +325,7 @@
 		    		@include media('<tablet') {
 		           		width: 14px;
 						height: 19px;
-						right: -10px;
+						right: -15px;
 		    		}
 		    		@include media('<phone') {
 						right: -18px;
@@ -286,7 +337,7 @@
 					right: auto;
 					transform: rotate(180deg);
 					@include media('<tablet') {
-		           		left: -10px;
+		           		left: -15px;
 		    		}
 		    		@include media('<phone') {
 						left: -18px;
@@ -351,6 +402,14 @@
 		.picture-holder {
 			width: 12.5%;
 			max-height: 164px;
+			@include media('>tablet') {
+			&.picture-1 {
+       			width: 7%;
+       		}
+       		&.picture-2 {
+       			width: 7%;
+       			}
+			}
 			@include media('<phone') {
        		width: 50%;
        		margin-bottom: 10px;
