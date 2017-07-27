@@ -36,12 +36,6 @@
 	    }
 	.container {
 		padding: 0;
-		@media screen and (max-width: 1600px){
-			padding: 0 15px;
-		}
-		@include media('<tablet') {
-			padding: 0;
-		}
 	}
 	.content-wrapper {
 		padding: 58px 58px 75px 84px;
@@ -260,9 +254,6 @@
 	@include media('<phone') {
 		padding: 0;
 	}
-	.container {
-		padding: 0;
-	}
 	h2 {
 		text-align: center;
 		margin-bottom: 48px;
@@ -361,7 +352,9 @@
 	    background-position: -280px -190px;
 	}
 	.container {
-		padding: 0;
+		@include media('<phone') {
+			padding: 0;
+		}
 	}
 	.section-title {
 		text-align: center;
@@ -389,64 +382,64 @@
        		line-height: 1.2;
 		}
 	}
-	.pictures-holder {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 35px 23px 53px 32px;
-		background-color: $white;
-		@include media('<phone') {
-       		flex-wrap: wrap;
-       		padding: 23px 20px;
-		}
-		.picture-holder {
-			width: 12.5%;
-			max-height: 164px;
-			@include media('>tablet') {
-			&.picture-1 {
-       			width: 7%;
-       		}
-       		&.picture-2 {
-       			width: 7%;
-       			}
-			}
-			@include media('<phone') {
-       		width: 50%;
-       		margin-bottom: 10px;
-       		&.picture-2 {
-				img {
-					width: 57px;
-					height: 77px;
-				}
-       		}
-       		&.picture-3 {
-				order: 4;
-       			}
-       		&.picture-4 {
-				order: 3;
-       			}
-       		&.picture-5 {
-				order: 6;
-       			}
-       		&.picture-6 {
-				order: 5;
-       			}
-       		&.picture-7 {
-				order: 8;
-       			}
-       		&.picture-8 {
-				order: 7;
-       			}
-			}
-			img {
-				display: block;
-				margin: 0 auto;
-				@include media('<phone') {
-					width: 55%;
-					height: auto;
-				}
-			}
+}
 
+.pictures-holder {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 35px 23px 53px 32px;
+	background-color: $white;
+	@include media('<phone') {
+   		flex-wrap: wrap;
+   		padding: 23px 20px;
+	}
+	.picture-holder {
+		width: 12.5%;
+		max-height: 164px;
+		@include media('>tablet') {
+		&.picture-1 {
+   			width: 7%;
+   		}
+   		&.picture-2 {
+   			width: 7%;
+   			}
+		}
+		@include media('<phone') {
+   		width: 50%;
+   		margin-bottom: 10px;
+   		&.picture-2 {
+			img {
+				width: 57px;
+				height: 77px;
+			}
+   		}
+   		&.picture-3 {
+			order: 4;
+   			}
+   		&.picture-4 {
+			order: 3;
+   			}
+   		&.picture-5 {
+			order: 6;
+   			}
+   		&.picture-6 {
+			order: 5;
+   			}
+   		&.picture-7 {
+			order: 8;
+   			}
+   		&.picture-8 {
+			order: 7;
+   			}
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+			@include media('<phone') {
+				width: 55%;
+				height: auto;
+			}
 		}
 	}
 }
