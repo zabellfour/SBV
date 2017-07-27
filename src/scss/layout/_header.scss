@@ -23,9 +23,8 @@
         }
         @include media('<tablet') {
             background-color: transparent;
-            padding-top: 15px;	
-            padding-bottom: 23px;	
-
+            padding-top: 15px;
+            padding-bottom: 23px;
         }
         nav {
             float: right;
@@ -34,24 +33,24 @@
                 margin-right: -32px;
             }
             @include media('<desktop') {
-            	margin-right: 0;	
-            }	
+                margin-right: 0;
+            }
             @include media('<tablet') {
-            	float: left;	
-            	margin-left: 20px;	
-            }	
+                float: left;
+                margin-left: 20px;
+            }
             a {
                 margin: 0 24px;
                 display: inline-block;
                 position: relative;
                 @include media('<tablet') {
-                	width: 100%;	
-                	color:$gold;
-                	margin: 0;	
-                	font-size: 15px;	
-                	font-weight: 	600;
-text-align: left;
-                }	
+                    width: 100%;
+                    color: $gold;
+                    margin: 0;
+                    font-size: 15px;
+                    font-weight: 600;
+                    text-align: left;
+                }
                 &:after {
                     content: '';
                     position: absolute;
@@ -62,9 +61,8 @@ text-align: left;
                     margin-top: -1px;
                     background-color: $white;
                     @include media('<tablet') {
-         display: 	none !important	;
-                    				
-                    }	
+                        display: none !important;
+                    }
                 }
                 &:last-of-type {
                     margin-right: 0;
@@ -119,11 +117,15 @@ text-align: left;
         li {
 
             display: flex;
+            &.current-menu-item a {
+                background-color: $black;
+            }
+
             &:last-child a:after {
                 display: none;
-                 @include media('<tablet') {
-                display:block;
-            }
+                @include media('<tablet') {
+                    display: block;
+                }
             }
             @include media('<tablet') {
                 width: 100%;
@@ -168,9 +170,6 @@ text-align: left;
                 @include media('<widescreen') {
                     flex-shrink: 1;
                 }
-            }
-            &.current-menu-item a {
-                background-color: $black;
             }
             &:after {
                 content: '';
@@ -228,10 +227,10 @@ text-align: left;
         height: 16px;
         overflow: hidden;
         z-index: 2;
-		display: none;
-		@include media('<tablet') {
-			display: block;
-		}
+        display: none;
+        @include media('<tablet') {
+            display: block;
+        }
         &:after,
         &:before {
             content: '';
