@@ -16,6 +16,11 @@
     }
 @include media('<tablet') {
 	padding-top: 10px;
+    margin-bottom: 30px;
+}
+@include media('<phone') {
+    box-shadow: none;
+    margin-bottom: 19px;
 }
     .img-box {
         width: 20%;
@@ -25,9 +30,9 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-        min-height: 217px;
+        min-height: 200px;
         padding-bottom: 22px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         @include media('<desktop') {
             width: 33%;
             flex-wrap: wrap;

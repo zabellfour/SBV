@@ -2,6 +2,7 @@
     color: $white;
     position: relative;
     background-color: $gray;
+
     a {
         @include animate(color);
         color: inherit;
@@ -132,7 +133,7 @@
             }
         }
         a {
-            @include animate(background-color);
+            @include animate(background-color color);
             padding: 46px 22px 39px;
             display: inline-block;
             position: relative;
@@ -148,8 +149,8 @@
                 font-size: 14px;
             }
             @include media('<desktop') {
-                padding: 15px 3px;
-                font-size: 13px;
+                padding: 21px 4px 22px;
+                font-size: 12px;
             }
             @include media('<tablet') {
                 width: 100%;
@@ -158,6 +159,7 @@
                 padding: 21px 20px 22px;
                 font-size: 18px;
                 font-weight: 400;
+                font-size: 13px;    
             }
             br {
                 @include media('<widescreen') {
@@ -228,8 +230,13 @@
         overflow: hidden;
         z-index: 2;
         display: none;
+        cursor:pointer;
         @include media('<tablet') {
             display: block;
+        }
+        &:hover:after, &:hover:before{
+            @include animate(background-color);    
+             background-color: $gold;
         }
         &:after,
         &:before {
