@@ -140,7 +140,7 @@
         width: 168px;
         padding: 0 5px 0 0;
         transform: translateY(-6px);
-        margin: 0 auto 20px;
+      
         @include media('<widescreen') {
             width: 120px;
         }
@@ -148,11 +148,15 @@
             width: 95px;
         }
         @include media('<tablet') {
-            width: 93px;
+            width: 163px;
             transform: translateY(0);
-            margin-bottom: 17px;
+      
+              margin: 0 auto 17px;
         }
 
+        @include media('<phone') {
+        	width: 93px;
+        }
 
         img {
             width: 100%;
