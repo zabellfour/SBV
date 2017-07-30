@@ -1,0 +1,183 @@
+#footer {
+    background-color: $gray;
+    overflow: hidden;
+    color: $white;
+    font-size: 13px;
+    @include media('<desktop') {
+        font-size: 11px;
+    }
+    @include media('<tablet') {
+        display: block;
+        padding-top: 20px;
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+        @include animate(background-color color);
+    }
+    .container {
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        @include media('<tablet') {
+            display: block;
+        }
+    }
+    .footer-left {
+        width: 76.7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media('<desktop') {
+            width: 82%;
+        }
+        @include media('<tablet') {
+            width: 100%;
+        }
+    }
+    .footer-links {
+        padding: 30px 10px 33px 25px;
+        display: flex;
+        width: 100%;
+        @include media('<widescreen') {
+            padding: 30px 5px 30px 10px;
+        }
+        @include media('<tablet') {
+            display: none;
+        }
+        a {
+            &:hover {
+                color: $gold;
+            }
+        }
+
+        .col {
+            width: 31%;
+
+            display: flex;
+            flex-shrink: 0;
+            flex-direction: column;
+            &:first-child {
+                width: 27.5%;
+            }
+            &:last-child {
+                width: 45%;
+            }
+        }
+
+        a {
+            position: relative;
+            padding: 7px 5px 7px 30px;
+            @include media('<widescreen') {
+                padding-left: 15px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 1px;
+                background-color: $white;
+            }
+        }
+    }
+    .footer-right {
+        background-color: $gold;
+        position: relative;
+        width: 16.5%;
+        padding: 19px 10px 20px 35px;
+        align-self: stretch;
+        @include media('<widescreen') {
+            padding: 19px 10px 19px;
+        }
+        @include media('<desktop') {
+            width: 16%;
+        }
+        @include media('<tablet') {
+            display: block;
+            width: 100%;
+            background-color: transparent;
+
+            padding-top: 16px;
+        }
+        nav {
+
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            @include media('<tablet') {
+                align-items: center;
+            }
+            a {
+                margin-bottom: 4px;
+                display: inline-block;
+                font-size: 13px;
+                @include media('<tablet') {
+                	font-size: 10px;
+                }
+            }
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            right: auto;
+            bottom: 0;
+            width: 9999px;
+            background-color: $gold;
+            @include media('<tablet') {
+
+                display: none;
+            }
+        }
+    }
+    .logo {
+        display: inline-block;
+        width: 168px;
+        padding: 0 5px 0 0;
+        transform: translateY(-6px);
+        margin: 0 auto 20px;
+        @include media('<widescreen') {
+            width: 120px;
+        }
+        @include media('<desktop') {
+            width: 95px;
+        }
+        @include media('<tablet') {
+            width: 93px;
+            transform: translateY(0);
+            margin-bottom: 17px;
+        }
+
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .footer-contact {
+        display: none;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 800;
+        letter-spacing: -0.3px;
+        address {
+            margin-bottom: 0;
+            font-style: normal;
+        }
+        @include media('<tablet') {
+            display: block;
+        }
+    }
+}
+
+.mobile-hidden {
+    @include media('<tablet') {
+        display: none !important;
+    }
+}

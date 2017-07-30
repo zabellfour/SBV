@@ -257,15 +257,7 @@
             display: block;
         }
     }
-}
-
-.menu-open #header .menu-holder {
-    @include media('<tablet') {
-        transform: translateY(62px);
-    }
-}
-
-.logo {
+    .logo {
     display: inline-block;
     width: 189px;
     padding: 0 5px 0 0;
@@ -309,6 +301,15 @@
         height: auto;
     }
 }
+
+}
+
+.menu-open #header .menu-holder {
+    @include media('<tablet') {
+        transform: translateY(62px);
+    }
+}
+
 
 .menu-opener {
     @include animate(border-color);

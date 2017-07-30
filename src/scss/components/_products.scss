@@ -18,7 +18,7 @@
             margin-bottom: 15px;
         }
         @include media('<phone') {
-        	margin-bottom: 6px;
+            margin-bottom: 6px;
         }
     }
     .product-carousel-holder {
@@ -50,7 +50,7 @@
             transform: scale(1);
             padding: 25px 35px;
             border: 1px solid $gray-light;
-            box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
             margin-top: 48px;
             margin-bottom: 48px;
             display: flex;
