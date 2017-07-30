@@ -21,14 +21,11 @@
 	background-color: #fff5eb;
 	padding: 39px 0 82px 0;
 	border-top: 25px solid #fff5eb;
-	@media screen and (max-width: 1600px){
-		padding: 39px 15px 82px 15px;
-	}
 	@include media('<widescreen') {
-            padding: 20px 15px 20px 15px;
+            padding: 20px 15px 50px 15px;
 	    }
 	@include media('<desktop') {
-			padding: 20px 0 20px 0;
+			padding: 20px 0 30px 0;
             background-size: 5%;
 	    }
 	@include media('<tablet') {
@@ -37,10 +34,11 @@
 	    }
 	@include media('<phone') {
             background-size: 15%;
+            padding-bottom: 0;
+            .container {
+            	padding: 0;
+            }
 	    }
-	.container {
-		padding: 0;
-	}
 	.content-wrapper {
 		justify-content: space-between;
 		padding: 58px 58px 75px 84px;
@@ -54,7 +52,7 @@
            border: 0;
 	    }
 	    @include media('<phone') {
-           padding: 0 0 50px 0;
+           padding: 0 0 36px 0;
 	    }
 		.section-title, .btn-holder {
 			position: absolute;
@@ -138,7 +136,7 @@
 	           	top: 50%;
 	           	height: 1px;
 	           	width: 500px;
-	           	right: -525px;
+	           	right: -500px;
 	           	left: auto;
 	           	background-color: $gold;
 	           }
@@ -149,43 +147,14 @@
 	           	height: 1px;
 	           	width: 500px;
 	           	background-color: $gold;
-	           	left: -525px;
+	           	left: -500px;
 	           }
 	       	}
 		    @include media('<phone') {
 			    width: 84%;
 		        padding: 6px 23px;
-		        bottom: -34px;
+		        bottom: -16px;
 		    }
-			.button {
-				@include animate (color background-color, .3s)
-				display: block;
-				padding: 16.5px 44px;
-				font-size: 20px;
-				font-weight: 600;
-				color: $white;
-				text-decoration: none;
-				background-color: $red;
-				border-top: 2px solid $red;
-				border-left: 2px solid $red;
-				border-right: 2px solid $red;
-				border-bottom: 7px solid #b5050f;
-				text-align: center;
-				@include media('<widescreen') {
-			    padding: 12px 28px;
-		  		}
-				@include media('<desktop') {
-		           font-size: 16px;
-		    	}
-		    	@include media('<tablet') {
-		           padding: 12px 20px;
-		           font-size: 16px;
-		    	}
-				&:hover {
-					background-color: $white;
-					color: $red;
-				}
-			}
 		}
 	}
 
@@ -221,6 +190,7 @@
 	           padding: 15px 25px 25px 15px;
 		    }
 		    @include media('<tablet') {
+		    	max-width: 100%;
 	    		width: 100%;
 			}
 			@include media('<tablet') {
@@ -289,7 +259,7 @@
 }
 
 .brands {
-	padding: 65px 0 90px 0;
+	padding: 62px 0 90px 0;
 	@include media('<phone') {
 		padding: 0;
 	}
@@ -301,7 +271,7 @@
 		}
 	}
 	.carousel-holder {
-	padding: 20px 100px 52px;
+	padding: 23px 100px 48px;
 	box-shadow: 0px 0px 12px $gray-light;
 	@include media('<tablet') {
 		padding: 20px 60px 32px;
@@ -312,16 +282,16 @@
 	}
 		.brands-carousel {
 			.brands-slide {
-				width: 240px;
+				width: 220px;
 				margin: 0 auto;
 				@include media('<widescreen') {
 		           width: 190px;
 		    	}
 		    	@include media('<desktop') {
-		           width: 130px;
+		           width: 120px;
 		    	}
 		    	@include media('<tablet') {
-		           width: 190px;
+		           width: 150px;
 		    	}
 		    	@include media('<phone') {
 		           width: 100px;
@@ -380,7 +350,7 @@
 
 
 .image-bg {
-	padding: 20px 0 67px 0;
+	padding: 30px 0 67px 0;
 	background: url(../images/bottom-img-bg.svg) #f4f4f4;
 	background-repeat: no-repeat;
 	background-size: 100%;
@@ -413,6 +383,7 @@
 		font-size: 23px;
 		font-weight: 500;
 		margin-bottom: 50px;
+		line-height: 1.2;
 		@include media('<desktop') {
        		font-size: 18px;
 		}
@@ -436,23 +407,33 @@
 	.picture-holder {
 		width: 12.5%;
 		max-height: 164px;
-		@include media('>tablet') {
 		&.picture-1 {
    			width: 7%;
    		}
    		&.picture-2 {
    			width: 7%;
    			}
+   		&.picture-3 {
+   			width: 11%;
+   			}
+		@include media('<tablet') {
+			width: 9%;
+	   		&.picture-3 {
+   			width: 9%;
+   			}
 		}
 		@include media('<phone') {
-   		width: 50%;
+   		width: 36%;
    		margin-bottom: 10px;
-   		&.picture-2 {
-			img {
-				width: 57px;
-				height: 77px;
-			}
+   		&.picture-1 {
+   			width: 36%;
    		}
+   		&.picture-2 {
+   			width: 30%;
+   			}
+   		&.picture-3 {
+   			width: 36%;
+   			}
    		&.picture-3 {
 			order: 4;
    			}
@@ -475,10 +456,6 @@
 		img {
 			display: block;
 			margin: 0 auto;
-			@include media('<phone') {
-				width: 55%;
-				height: auto;
-			}
 		}
 	}
 }
@@ -498,4 +475,38 @@
 .bold {
 	font-weight: 600;
 	color: inherit;
+}
+
+.button-red {
+	@include animate (color background-color, .3s)
+	display: block;
+	padding: 16.5px 4px;
+	min-width: 276px;
+	font-size: 20px;
+	font-weight: 600;
+	color: $white;
+	text-decoration: none;
+	background-color: $red;
+	border-top: 2px solid $red;
+	border-left: 2px solid $red;
+	border-right: 2px solid $red;
+	border-bottom: 7px solid #b5050f;
+	text-align: center;
+	@include media('<widescreen') {
+    padding: 12px 4px;
+		}
+	@include media('<desktop') {
+       font-size: 16px;
+	}
+	@include media('<tablet') {
+       padding: 12px 4px;
+       font-size: 16px;
+	}
+	@include media('<phone') {
+      min-width: 222px;
+	}
+	&:hover {
+		background-color: $white;
+		color: $red;
+	}
 }
