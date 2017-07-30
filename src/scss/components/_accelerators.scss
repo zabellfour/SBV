@@ -104,7 +104,19 @@
 			span {
 				line-height: 1;
 			}
-
+			.grayscale.grayscale-fade {
+			    transition: filter 2s;
+			}
+			.grayscale{
+			    transition: filter 2s;
+			}
 		}
 	}
+}
+
+.grayscale.grayscale-fade {
+			    transition: filter 2s;
+			}
+.grayscale{
+    transition: filter 2s;
 }
