@@ -44,14 +44,13 @@
             autoHeight: false,
             margin: 101,
             responsive: {
-
                 0: {
                     items: 1,
-margin:0,
+                    margin: 0,
                 },
-                  480: {
+                480: {
                     items: 2,
- margin: 10,
+                    margin: 10,
                 },
                 768: {
                     items: 3,
@@ -60,12 +59,11 @@ margin:0,
                 },
                 1024: {
                     items: 3,
-margin:80,
-
+                    margin: 80,
                 },
-                   1200: {
+                1200: {
                     items: 3,
-margin:101,
+                    margin: 101,
 
                 }
             },
@@ -98,6 +96,13 @@ margin:101,
         $menuClose.on("click", function() {
             $body.removeClass('menu-open');
         });
+
+        $('.grid-wrapper').on('click', '.opener', function(event) {
+            $(this).closest('.grid-row').find('.bottom-row').slideToggle();
+            $(this).closest('.grid-row').find('.opener').toggleClass('active');
+            event.preventDefault();
+        });
+        $('.active').closest('.grid-row').find('.bottom-row').slideDown();
     });
 
 })(jQuery);
