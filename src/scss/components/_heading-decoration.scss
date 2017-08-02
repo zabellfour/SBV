@@ -25,6 +25,9 @@
         @include media('<tablet') {
             padding: 7px 70px 9px 11px;
         }
+        @include media('<phone') {
+            padding: 7px 55px 9px 11px;
+        }
         &:after {
             content: '';
             position: absolute;

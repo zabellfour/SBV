@@ -1,5 +1,5 @@
 .accelerators-block {
-	padding: 60px 0 93px 0;
+	padding: 60px 0 100px 0;
 	@include media('<desktop') {
 		padding: 34px 0 43px 0;
 	}
@@ -8,12 +8,6 @@
 	}
 	@include media('<phone') {
 		margin-bottom: 10px;
-	}
-	.container {
-		padding: 0;
-		@media screen and (max-width: 1600px){
-			padding: 0 15px;
-		}
 	}
 	.accelerators-holder {
 		width: 100%;
@@ -112,11 +106,4 @@
 			}
 		}
 	}
-}
-
-.grayscale.grayscale-fade {
-			    transition: filter 2s;
-			}
-.grayscale{
-    transition: filter 2s;
 }

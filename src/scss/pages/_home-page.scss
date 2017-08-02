@@ -18,9 +18,9 @@
 .ornament-bg {
 	background: url(../images/ornament.png) -5px 0;
 	background-size: 3.5%;
-	background-color: #fff5eb;
+	background-color: $pink;
 	padding: 39px 0 82px 0;
-	border-top: 25px solid #fff5eb;
+	border-top: 25px solid $pink;
 	@include media('<widescreen') {
             padding: 20px 15px 50px 15px;
 	    }
@@ -56,7 +56,7 @@
 	    }
 		.section-title, .btn-holder {
 			position: absolute;
-			background-color: #fff5eb;
+			background-color: $pink;
 			left: 50%;
 			transform: translateX(-50%); 
 		}
@@ -132,29 +132,42 @@
 		    	text-align: center;
 	           &:after {
 	           	content: "";
+	           	display: block;
 	           	position: absolute;
 	           	top: 50%;
 	           	height: 1px;
 	           	width: 500px;
-	           	right: -500px;
+	           	right: -530px;
 	           	left: auto;
 	           	background-color: $gold;
 	           }
 	           &:before {
 	           	content: "";
+	           	display: block;
 	           	position: absolute;
 	           	top: 50%;
 	           	height: 1px;
 	           	width: 500px;
 	           	background-color: $gold;
-	           	left: -500px;
+	           	left: -530px;
 	           }
 	       	}
 		    @include media('<phone') {
 			    width: 84%;
 		        padding: 6px 23px;
 		        bottom: -16px;
+		        &:after {
+	           	right: -500px;
+		        }
+		        &:before {
+		           	left: -500px;
+		        }
 		    }
+			.button-red {
+				@include media('<phone') {
+			      min-width: 222px;
+				}
+			}
 		}
 	}
 
@@ -219,7 +232,7 @@
 			.divider {
 				height: 1px;
 				width: 70%;
-				background-color: #999999;
+				background-color: $gray-light;
 				margin: 4px 0 29px 0;
 				@include media('<tablet') {
 		    		width: 100%;
@@ -229,7 +242,7 @@
 				}
 			}
 			p {
-				color: #999;
+				color: $gray-light;
 				line-height: 1.2;
 				@include media('<phone') {
 		    		display: none;
@@ -280,8 +293,10 @@
 		padding: 20px 30px 32px;
 		box-shadow: none;
 	}
-		.brands-carousel {
+	.brands-carousel {
 			.brands-slide {
+				@include animate(transform, .3s)
+				display: block;
 				width: 220px;
 				margin: 0 auto;
 				@include media('<widescreen') {
@@ -296,6 +311,9 @@
 		    	@include media('<phone') {
 		           width: 100px;
 		    	}
+		    	&:hover {
+		    		transform: scale(0.95)
+		    	}
 			}
 			img {
 				display: block;
@@ -309,7 +327,9 @@
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
+				z-index: -1;
 				.owl-next {
+					@include animate (opacity, 0.3s)
 					display: block;
 					position: absolute;
 					width: 25px;
@@ -329,6 +349,9 @@
 		    		}
 		    		@include media('<phone') {
 						right: -18px;
+		    		}
+		    		&:hover {
+		    			opacity: 0.5;
 		    		}
 				}
 				.owl-prev {
@@ -401,6 +424,8 @@
 	padding: 35px 23px 53px 32px;
 	background-color: $white;
 	@include media('<phone') {
+		max-width: 260px;
+		margin: 0 auto;
    		flex-wrap: wrap;
    		padding: 23px 20px;
 	}
@@ -426,10 +451,14 @@
    		width: 36%;
    		margin-bottom: 10px;
    		&.picture-1 {
-   			width: 36%;
+   			width: 39%;
    		}
    		&.picture-2 {
-   			width: 30%;
+   			width: 26%;
+   			img {
+   				position: relative;
+   				right: 15px;
+   				}
    			}
    		&.picture-3 {
    			width: 36%;
@@ -469,44 +498,10 @@
 }
 
 .marked-middle-gray {
-	color: #585857;
+	color: $gray3;
 }
 
 .bold {
 	font-weight: 600;
 	color: inherit;
-}
-
-.button-red {
-	@include animate (color background-color, .3s)
-	display: block;
-	padding: 16.5px 4px;
-	min-width: 276px;
-	font-size: 20px;
-	font-weight: 600;
-	color: $white;
-	text-decoration: none;
-	background-color: $red;
-	border-top: 2px solid $red;
-	border-left: 2px solid $red;
-	border-right: 2px solid $red;
-	border-bottom: 7px solid #b5050f;
-	text-align: center;
-	@include media('<widescreen') {
-    padding: 12px 4px;
-		}
-	@include media('<desktop') {
-       font-size: 16px;
-	}
-	@include media('<tablet') {
-       padding: 12px 4px;
-       font-size: 16px;
-	}
-	@include media('<phone') {
-      min-width: 222px;
-	}
-	&:hover {
-		background-color: $white;
-		color: $red;
-	}
 }

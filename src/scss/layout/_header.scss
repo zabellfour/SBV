@@ -209,7 +209,7 @@
             flex-direction: column-reverse;
             flex-wrap: wrap;
             background-color: rgba($gray2, .9);
-            z-index: 2;
+            z-index: 999;
         }
         .container {
             @include media('<tablet') {
