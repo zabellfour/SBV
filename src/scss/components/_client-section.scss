@@ -51,21 +51,21 @@
                 display: flex;
                 flex-wrap: wrap;
                 padding-top: 19px;
-                padding-right: 0 !important	;
-                padding-left: 0 !important	;
+                padding-right: 0 !important;
+                padding-left: 0 !important;
                 padding-bottom: 105px;
             }
             p {
                 margin-bottom: 20px;
                 @include media('<tablet') {
-                	margin-bottom: 18px;
+                    margin-bottom: 18px;
                 }
             }
             ul {
                 @extend %listreset;
                 line-height: 1.2;
                 @include media('<tablet') {
-                	font-size: 15px;
+                    font-size: 15px;
                 }
                 li {
                     position: relative;
@@ -79,7 +79,7 @@
                         width: 6px;
                         background-color: currentColor;
                         @include media('<tablet') {
-                        	top:11px;
+                            top: 11px;
                         }
                     }
                 }
@@ -92,7 +92,7 @@
                 padding-left: 0;
                 position: relative;
                 @include media('<tablet') {
-                	padding-bottom: 105px;
+                    padding-bottom: 105px;
                 }
                 .btn-holder {
                     left: -140px;
@@ -117,7 +117,7 @@
                     position: absolute;
                     left: 25%;
                     transform: translateX(calc( -50% - 70px));
-                    z-index: 999;
+                    z-index: 99;
                     top: -1px;
                     @include triangle(60px, white, down);
                     @include media('<tablet') {
@@ -137,10 +137,10 @@
                 padding-top: 42px;
                 padding-bottom: 28px;
                 @include media('<tablet') {
-                	padding-top: 49px;
-                	padding-left: 10px;
-                	padding-right: 10px;
-                	padding-bottom: 12px;
+                    padding-top: 49px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    padding-bottom: 12px;
                 }
                 .slide-close {
                     @include animate(opacity);
@@ -162,12 +162,12 @@
                     z-index: 999;
 
                     @include media('<tablet') {
-                    	width: 22px;
-                    	height: 22px;
-                    	top:18px;
-                    	right: 21px;
-                    	font-size: 18px;
-                    	line-height: 21px;
+                        width: 22px;
+                        height: 22px;
+                        top: 18px;
+                        right: 21px;
+                        font-size: 18px;
+                        line-height: 21px;
                     }
                     &:hover {
                         opacity: .8;
@@ -177,7 +177,7 @@
                     content: '';
                     position: absolute;
                     left: 75%;
-                    z-index: 999;
+                    z-index: 99;
                     top: -1px;
                     @include triangle(60px, white, down);
                     @include media('<tablet') {
@@ -198,11 +198,11 @@
         margin-bottom: 32px;
         display: block;
         @include media('<tablet') {
-text-align: center;
+            text-align: center;
             margin: 0 auto 10px;
             font-size: 24px;
             max-width: 200px;
-                    display: block;
+            display: block;
         }
         &:after {
             content: '';
@@ -217,9 +217,9 @@ text-align: center;
                 left: -999px;
                 top: 50%;
             }
-@include media('<phone') {
-	          right: 100% ;
-}
+            @include media('<phone') {
+                right: 100%;
+            }
         }
         &:before {
             @include media('<tablet') {
@@ -232,8 +232,8 @@ text-align: center;
                 right: -9999px;
                 top: 50%;
                 @include media('<phone') {
-	          left: 100% ;
-}
+                    left: 100%;
+                }
             }
         }
     }
@@ -245,27 +245,26 @@ text-align: center;
         left: 70px;
         right: 0;
         bottom: 60px;
-        .button-red{
-        	@include media('<tablet') {
-        		min-width: 225px;
-        	}
+        .button-red {
+            @include media('<tablet') {
+                min-width: 225px;
+            }
         }
         @include media('<widescreen') {
             left: 0;
         }
         @include media('<tablet') {
-        	bottom:30px;
+            bottom: 30px;
         }
     }
     .logo-group {
-
         .h5 {
             color: $gray-light;
             position: relative;
             margin-bottom: 38px;
             @include media('<tablet') {
-            	font-size: 22px;
-            	margin-bottom: 15px;
+                font-size: 22px;
+                margin-bottom: 15px;
             }
             &:after {
                 position: absolute;
@@ -278,19 +277,17 @@ text-align: center;
             }
         }
         .logos-holder {
-
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
-                	@include media('<phone') {
-    		
-    		display: flex;
-    		justify-content: center;
-    		flex-wrap:wrap;
-    		justify-content: center;
-    		padding:0 ;	
-    		margin-bottom: 11px;
-    	}
+            @include media('<phone') {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0;
+                margin-bottom: 11px;
+            }
             .logo-box {
                 @include animate(box-shadow);
                 margin-right: 7.1%;
@@ -304,13 +301,13 @@ text-align: center;
                 height: 243px;
                 text-align: center;
                 @include media('<tablet') {
-                	height: 121px;
-                	margin-right: 2%;
-                	width: 22%;
+                    height: 121px;
+                    margin-right: 2%;
+                    width: 22%;
                 }
                 @include media('<phone') {
-                	width: 40%;
-                	margin:0 9px 20px;
+                    width: 40%;
+                    margin: 0 9px 20px;
                 }
                 &:last-child {
                     margin-right: 0;

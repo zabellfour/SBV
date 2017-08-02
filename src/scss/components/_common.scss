@@ -12,7 +12,7 @@
 .button-red {
     @include animate (color background-color, .3s) display: block;
     padding: 16.5px 4px;
-min-width: 276px;
+    min-width: 276px;
     font-size: 20px;
     font-weight: 600;
     color: $white;

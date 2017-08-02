@@ -14,14 +14,14 @@
         padding-left: 39px;
         padding-right: 39px;
     }
-@include media('<tablet') {
-	padding-top: 10px;
-    margin-bottom: 30px;
-}
-@include media('<phone') {
-    box-shadow: none;
-    margin-bottom: 19px;
-}
+    @include media('<tablet') {
+        padding-top: 10px;
+        margin-bottom: 30px;
+    }
+    @include media('<phone') {
+        box-shadow: none;
+        margin-bottom: 19px;
+    }
     .img-box {
         width: 20%;
         font-size: 20px;
@@ -38,24 +38,22 @@
             flex-wrap: wrap;
         }
         @include media('<tablet') {
-        	width: 100%;
-        	border-right:none;
-        	  border-bottom: 1px solid $gold;
-        	  padding-bottom: 17px;
-        	  min-height: 225px;
-        	  margin-bottom: 5px;
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid $gold;
+            padding-bottom: 17px;
+            min-height: 225px;
+            margin-bottom: 5px;
         }
         &:last-child {
 
             border: none;
         }
-        &:nth-child(3){
-        	@include media('<desktop') {
-        		    border-right: none;
-        	}
-        	@include media('<tablet') {
-
-        	}
+        &:nth-child(3) {
+            @include media('<desktop') {
+                border-right: none;
+            }
+            @include media('<tablet') {}
         }
         img {
             display: inline-block;

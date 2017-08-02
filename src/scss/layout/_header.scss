@@ -1,8 +1,41 @@
+body {
+    @include media('<tablet') {
+        padding-top: 62px;
+    }
+    &.to-top #header {
+        @include media('<tablet') {
+            opacity: 1;
+            top: 0;
+        }
+    }
+    &.to-bottom #header {
+        @include media('<tablet') {
+            opacity: 0;
+            top: -62px;
+        }
+    }
+}
+
 #header {
     color: $white;
     position: relative;
     background-color: $gray;
+    @include media('<tablet') {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        opacity: 1;
+        @include animate(opacity top);
+    }
 
+    &.hidden {
+        @include media('<tablet') {
+            opacity: 0;
+            top: -62px;
+        }
+    }
     a {
         @include animate(color);
         color: inherit;
@@ -26,11 +59,11 @@
             background-color: transparent;
             padding-top: 15px;
             padding-bottom: 23px;
+            order:2;
         }
         nav {
             float: right;
             @include media('>1500px') {
-
                 margin-right: -32px;
             }
             @include media('<desktop') {
@@ -81,6 +114,7 @@
             background-color: transparent;
             position: relative;
             z-index: 1;
+            order:1;
         }
     }
     .bottom-holder {
@@ -95,9 +129,7 @@
         display: flex;
         align-items: stretch;
         justify-content: stretch;
-
         font-size: 18px;
-
         @include media('>1500px') {
             margin-right: -54px;
         }
@@ -113,10 +145,7 @@
             flex-wrap: wrap;
             padding-top: 14px;
         }
-
-
         li {
-
             display: flex;
             &.current-menu-item a {
                 background-color: $black;
@@ -159,7 +188,7 @@
                 padding: 21px 20px 22px;
                 font-size: 18px;
                 font-weight: 400;
-                font-size: 13px;    
+                font-size: 13px;
             }
             br {
                 @include media('<widescreen') {
@@ -200,16 +229,17 @@
         @include media('<tablet') {
             @include animate(transform);
             position: absolute;
-            top: 0;
+            top: 62px;
             left: 0;
             width: 215px;
-            transform: translateY(-100%);
-
+            transform: translateX(-100%);
             display: flex;
-            flex-direction: column-reverse;
-            flex-wrap: wrap;
+            flex-direction: column;
+            flex-wrap: no-wrap;
             background-color: rgba($gray2, .9);
             z-index: 999;
+            max-height: calc( 100vh - 62px );
+            overflow: auto;
         }
         .container {
             @include media('<tablet') {
@@ -230,13 +260,15 @@
         overflow: hidden;
         z-index: 2;
         display: none;
-        cursor:pointer;
+        cursor: pointer;
         @include media('<tablet') {
             display: block;
+            position: absolute;
         }
-        &:hover:after, &:hover:before{
-            @include animate(background-color);    
-             background-color: $gold;
+        &:hover:after,
+        &:hover:before {
+            @include animate(background-color);
+            background-color: $gold;
         }
         &:after,
         &:before {
@@ -253,60 +285,57 @@
         &:after {
             transform: translate(-50%, -50%) rotate(-45deg);
         }
-        @include media('<tablet') {
-            display: block;
-        }
+      
     }
     .logo {
-    display: inline-block;
-    width: 189px;
-    padding: 0 5px 0 0;
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 8px;
-    @include media('<1500px') {
-        width: 165px;
-    }
-    @include media('<widescreen') {
-        width: 100px;
-    }
-    @include media('<desktop') {
-        width: 92px;
-        bottom: 4px;
-    }
-    @include media('<tablet') {
-
-        position: static;
-        padding-top: 5px;
-    }
-    &-container {
+        display: inline-block;
+        width: 189px;
+        padding: 0 5px 0 0;
         position: absolute;
-
-        left: 15px;
         right: 0;
-        bottom: 0;
-
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 15px;
+        left: 0;
+        bottom: 8px;
+        @include media('<1500px') {
+            width: 165px;
+        }
+        @include media('<widescreen') {
+            width: 100px;
+        }
+        @include media('<desktop') {
+            width: 92px;
+            bottom: 4px;
+        }
         @include media('<tablet') {
+
             position: static;
-            text-align: center;
+            padding-top: 5px;
+        }
+        &-container {
+            position: absolute;
+
+            left: 15px;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 15px;
+            @include media('<tablet') {
+                position: static;
+                text-align: center;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: auto;
         }
     }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
 }
 
 .menu-open #header .menu-holder {
     @include media('<tablet') {
-        transform: translateY(62px);
+        transform: translateX(0px);
     }
 }
 
