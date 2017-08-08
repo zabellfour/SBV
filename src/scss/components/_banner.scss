@@ -24,7 +24,7 @@
 		min-width: 675px;
 		padding: 26px 43px;
 		background-color: $white;
-		box-shadow: 0px 43px 54px 0px rgba(0, 0, 0, 0.25);;
+		box-shadow: 0px -10px 15px 0px rgba(0, 1, 0, 0.2);
 		z-index: 3;
 		@media screen and (max-width: 1600px){
 			padding: 26px 33px;
@@ -44,7 +44,8 @@
 			bottom: -40px;
 			}
 		@include media('<phone') {
-			min-width: 275px;
+			padding: 15px 5px;
+			min-width: 280px;
 			bottom: -53px;
 			}
 		h1 {
@@ -93,6 +94,9 @@
 		text-shadow: 0px 0px 4.5px rgba(0, 0, 0, 0.6);
 		@include media('<tablet') {
 			font-size: 15px;
+		}
+		@include media('<tablet') {
+			font-size: 12px;
 		}
 		a {
 			color: inherit;
